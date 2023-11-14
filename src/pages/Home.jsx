@@ -13,19 +13,19 @@ export default function Home() {
     const navegacion = useNavigate()
 
     useEffect(() => {
-        if (datosUsuario.nombre !== "usuario"){
+        if (datosUsuario.nombre !== "usuario") {
             navegacion("/login")
         }
     }, []) //cuando se carga el componente, verifica que el usuario este loggeado, si no esta se redirige a login
 
     const darkTheme = createTheme({
         palette: {
-          mode: lightTheme ? 'light':'dark',
+            mode: lightTheme ? 'light' : 'dark',
         },
     });
 
-    return(
-        <>  
+    return (
+        <>
             <ThemeProvider theme={darkTheme}>
                 <Menu />
                 <Lista_todo tema={lightTheme} />

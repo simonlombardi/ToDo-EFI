@@ -148,7 +148,7 @@ function ResponsiveAppBar() {
           <Box sx={{ flexGrow: 0 }}>
             <Tooltip title="Open settings">
               <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                <Avatar/>
+                <Avatar />
               </IconButton>
             </Tooltip>
             <Menu
@@ -168,7 +168,7 @@ function ResponsiveAppBar() {
               onClose={handleCloseUserMenu}
             >
               {settings.map((setting) => (
-                <MenuItem key={setting} onClick={() => {handleCloseUserMenu(); logOut();}}>
+                <MenuItem key={setting} onClick={() => { handleCloseUserMenu(); logOut(); }}>
                   <Typography textAlign="center">{setting}</Typography>
                 </MenuItem>
 

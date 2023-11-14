@@ -13,17 +13,17 @@ export default function Contact() {
     const navegacion = useNavigate()
 
     useEffect(() => {
-        if (datosUsuario.nombre !== "usuario"){
+        if (datosUsuario.nombre !== "usuario") {
             navegacion("/login")
         }
     }, [])
 
     const darkTheme = createTheme({
         palette: {
-          mode: lightTheme ? 'light':'dark',
+            mode: lightTheme ? 'light' : 'dark',
         },
     });
-    return(
+    return (
         <>
             <ThemeProvider theme={darkTheme}>
                 <Menu />

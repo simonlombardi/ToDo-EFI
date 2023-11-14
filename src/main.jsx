@@ -6,9 +6,9 @@ import {
   RouterProvider,
 } from "react-router-dom";
 
-import  Home  from './pages/Home.jsx'
+import Home from './pages/Home.jsx'
 import Login from './pages/Login.jsx'
-import  Contact  from './pages/Contact.jsx'
+import Contact from './pages/Contact.jsx'
 import LoginProvider, { LoginContext } from './contexts/LoginProvider.jsx';
 import ThemeProvider from './contexts/ThemeProvider.jsx';
 
@@ -16,11 +16,11 @@ import ThemeProvider from './contexts/ThemeProvider.jsx';
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Login /> ,
+    element: <Login />,
   },
   {
     path: "/home",
-    element: <Home /> ,
+    element: <Home />,
   },
   {
     path: "/contact",

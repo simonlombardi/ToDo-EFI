@@ -37,26 +37,28 @@ export default function SignIn() {
 
   const darkTheme = createTheme({
     palette: {
-      mode: lightTheme ? 'light':'dark',
+      mode: lightTheme ? 'light' : 'dark',
     },
   });
 
-  {if (
-    datosUsuario.nombre === "usuario" &&
-    datosUsuario.contraseña === "demo"
-  ){
-    navegacion("/home");
-  }}
+  {
+    if (
+      datosUsuario.nombre === "usuario" &&
+      datosUsuario.contraseña === "demo"
+    ) {
+      navegacion("/home");
+    }
+  }
 
-  function handleUsuario(e){
+  function handleUsuario(e) {
     setUsuario(e.target.value)
 
   }
 
-  function handleContraseña(e){
+  function handleContraseña(e) {
     setContraseña(e.target.value)
   }
-  
+
   const handleSubmit = (event) => {
     event.preventDefault();
     setDatosUsuario({
@@ -66,14 +68,14 @@ export default function SignIn() {
     if (
       datosUsuario.nombre === "usuario" &&
       datosUsuario.contraseña === "demo"
-    ){
+    ) {
       navegacion("/home");
-    }else{
+    } else {
       setOpen(true)
     }
-    
+
   };
-  
+
   const handleClose = () => {
     setOpen(false);
   };

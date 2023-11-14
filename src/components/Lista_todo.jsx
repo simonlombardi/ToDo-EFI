@@ -50,7 +50,7 @@ export default function Lista_todo({ tema }) {
       }}
     >
       {cargando && <Skeleton animation="wave" />}
-      <FormControl style={{marginTop:"4%"}}>
+      <FormControl style={{ marginTop: "4%", width: "8em" }}>
         <InputLabel id="demo-controlled-open-select-label">
           Nro. Tareas
         </InputLabel>
@@ -71,19 +71,18 @@ export default function Lista_todo({ tema }) {
           <MenuItem value={"15"}>15</MenuItem>
           <MenuItem value={"20"}>20</MenuItem>
         </Select>
-        <Grid container justifyContent="space-between" alignItems="center" >
-          {tareas.slice(desde, hasta).map((item, index) => {
-            return (
-              <Grid key={index} item xs={12} sm={6} md={4} lg={3}>
+      </FormControl><Grid container>
+        {tareas.slice(desde, hasta).map((item, index) => {
+          return (
+            <Grid key={index} item xs={12} sm={6} md={4} lg={3}>
               <Tarjeta
-                key={index}
                 titulo={item.title}
                 estado={item.completed ? "Completado" : "Incompleto"}
               />
-              </Grid>)})}
-        </Grid>
-      </FormControl>
-      <Stack style={{margin:"5.5%"}}>
+            </Grid>)
+        })}
+      </Grid>
+      <Stack style={{ margin: "5.5%" }}>
         <Pagination
           count={Math.round(200 / cantidadTareas)}
           page={pagActual}

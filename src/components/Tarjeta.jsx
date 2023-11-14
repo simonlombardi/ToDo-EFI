@@ -12,9 +12,8 @@ export default function BasicCard({ titulo, estado }) {
       transition={{ duration: 0.5 }}
     >
       <Card
-        
         variant="outlined"
-        style={{ margin: "0.2em", width: "250px", minHeight: "130px" }}
+        style={{ margin: "1rem", width: "auto", minHeight: "150px" }}
       >
         <CardContent>
           <Typography variant="h6" component="div">
